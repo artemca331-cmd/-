@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-Визитка Глеба</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">ГЛЕБ ШОКОТ<span id="secret-dot">.</span></div>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">Навыки</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#" id="secret-67" class="nav-secret-btn">67</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Привет, я <span class="highlight">Глеб Шокот</span></h1>
+            <p class="typewriter">Я занимаюсь <span id="dynamic-text"></span></p>
+            <a href="#about" class="btn">Узнать больше</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>Мои Навыки и Технологии</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <h3>Roblox Studio</h3>
+                <p>Создание полноценных игровых миров, разработка уровней и дизайн плейсов.</p>
+            </div>
+            <div class="about-card">
+                <h3>Язык Lua</h3>
+                <p>Написание скриптов, программирование игровой логики, механик и систем.</p>
+            </div>
+            <div class="about-card">
+                <h3>Нейросети</h3>
+                <p>Работа с искусственным интеллектом, генерация контента и использование ИИ-моделей.</p>
+            </div>
+            <div class="about-card">
+                <h3>Thunkable</h3>
+                <p>Визуальное программирование и быстрое создание мобильных приложений без сложного кода.</p>
+            </div>
+            <div class="about-card">
+                <h3>Tinkercad</h3>
+                <p>3D-моделирование объектов, создание схем и изучение основ электроники.</p>
+            </div>
+            <div class="about-card">
+                <h3>Яндекс Сервисы</h3>
+                <p>Интеграция, настройка и эффективное использование инструментов экосистемы Яндекса.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts-section">
+        <h2>Связаться со мной</h2>
+        <p>Оставьте сообщение, и я отвечу вам в ближайшее время!</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Сообщение отправлено!');">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea placeholder="Ваше сообщение или предложение" rows="5" required></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+        <div class="social-links" style="margin-top: 40px;">
+            <a href="#" class="social-btn">Telegram</a>
+            <a href="#" class="social-btn">GitHub</a>
+            <a href="#" class="social-btn">Discord</a>
+        </div>
+    </section>
+
+    <div id="clicker-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-clicker">&times;</span>
+            <h2>Автокликер 67</h2>
+            <div class="score-board">
+                <p>Баланс: <span id="coins">0</span> 💰</p>
+                <p>Доход: +<span id="cps">0</span>/сек</p>
+            </div>
+            <div style="position: relative; height: 160px; display: flex; justify-content: center; align-items: center;">
+                <button id="click-me-btn">КЛИК!</button>
+                <div id="golden-bonus" class="golden-coin">⭐</div>
+            </div>
+            <div class="upgrades-list">
+                <div class="upgrade-item">
+                    <div>
+                        <h4>Сила клика (+1)</h4>
+                        <p>Цена: <span id="click-cost">15</span> 💰</p>
+                    </div>
+                    <button id="buy-click" class="game-btn">Купить</button>
+                </div>
+                <div class="upgrade-item">
+                    <div>
+                        <h4>Автокликер (+1 в сек)</h4>
+                        <p>Цена: <span id="auto-cost">50</span> 💰</p>
+                    </div>
+                    <button id="buy-auto" class="game-btn">Купить</button>
+                </div>
+            </div>
+            <button id="reset-clicker" class="game-btn" style="margin-top: 15px; width: 100%; border-color: #ff4d4d; color: #ff4d4d;">Сбросить прогресс</button>
+        </div>
+    </div>
+
+    <div id="hacker-modal" class="modal">
+        <div class="modal-content hack-theme">
+            <span class="close-btn" id="close-hacker">&times;</span>
+            <h2>Взломай Нейросеть 67</h2>
+            <p style="font-size: 0.9rem; color: #00ff00; margin-bottom: 10px;">Кликай только по зеленым кубам, пока они не исчезли!</p>
+            <div class="score-board" style="background: #051a05; border-color: #00ff00;">
+                <p>Очки взлома: <span id="hack-score">0</span> ⚡</p>
+                <p>Уровень Хакера: <span id="hack-level">Новичок</span></p>
+            </div>
+            <div id="hacker-zone">
+                <button id="start-hack-btn" class="game-btn" style="border-color: #00ff00; color: #00ff00; padding: 15px 30px;">НАЧАТЬ ВЗЛОМ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
